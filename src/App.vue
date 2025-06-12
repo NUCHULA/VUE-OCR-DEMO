@@ -179,7 +179,7 @@ async function gptParse(rawText) {
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text: rawText })
+      body: JSON.stringify({ userText: rawText })
     }
   )
   if (!res.ok) throw new Error('Parse API error ' + res.status)
